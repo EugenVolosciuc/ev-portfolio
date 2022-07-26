@@ -2,11 +2,12 @@ import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import fs from "fs";
 import matter from "gray-matter";
 import dayjs from "dayjs";
+import Link from "next/link";
+import Head from "next/head";
 
 import { Layout } from "components";
 import { BlogPost as TBlogPost } from "types/blog";
 import calculateReadTime from "utils/calculate-read-time";
-import Link from "next/link";
 
 const BlogPost = ({ post }: { post: TBlogPost }) => {
   const { title, catchphrase, date } = post.frontmatter;
@@ -29,6 +30,9 @@ const BlogPost = ({ post }: { post: TBlogPost }) => {
 const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout>
+      <Head>
+        <title>Blog | Eugen Volosciuc</title>
+      </Head>
       <div className="container mx-auto max-w-prose pt-16 px-4">
         <h1 className="font-extrabold text-4xl mb-2">
           A little bit about everything

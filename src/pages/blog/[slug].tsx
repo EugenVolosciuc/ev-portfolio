@@ -9,12 +9,17 @@ import calculateReadTime from "utils/calculate-read-time";
 import { Layout } from "components";
 import { BlogPost as TBlogPost } from "types/blog";
 import { markdownProseClasses } from "constants/classnames";
+import Head from "next/head";
 
 type BlogPostWithContent = TBlogPost & { content: string };
 
 const BlogPost = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout>
+      <Head>
+        <title>{post.frontmatter.title} | Eugen Volosciuc</title>
+        <meta name="description" content={post.frontmatter.catchphrase} />
+      </Head>
       <div className={`${markdownProseClasses} mx-auto pt-16 px-4`}>
         <h1 className="mb-2">{post.frontmatter.title}</h1>
         <div className="text-xs">
