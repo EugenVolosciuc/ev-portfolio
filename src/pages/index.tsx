@@ -114,7 +114,6 @@ const menuItems = {
   },
 };
 
-// TODO: add callbacks
 const speechBubbleTexts = [
   {
     content: "Hi there, I'm Eugen.\nGreat seeing you!",
@@ -124,21 +123,28 @@ const speechBubbleTexts = [
     content: "You can check some\nof my projects down\nbelow..",
     duration: 2500,
     callback() {
-      (document.querySelector("#projects-btn") as HTMLElement).focus();
+      const projectsBtn = document.querySelector(
+        "#projects-btn"
+      ) as HTMLElement | null;
+      if (projectsBtn) projectsBtn.focus();
     },
   },
   {
     content: "..or find out more\nabout my life and work\nexperience up above.",
     duration: 2500,
     callback() {
-      (document.querySelector("#about-btn") as HTMLElement).focus();
+      const aboutBtn = document.querySelector(
+        "#about-btn"
+      ) as HTMLElement | null;
+      if (aboutBtn) aboutBtn.focus();
     },
   },
   {
     content: "I also try to\nwrite some blog\nposts from time\nto time.",
     duration: 2500,
     callback() {
-      (document.querySelector("#blog-btn") as HTMLElement).focus();
+      const blogBtn = document.querySelector("#blog-btn") as HTMLElement | null;
+      if (blogBtn) blogBtn.focus();
     },
   },
   {
@@ -146,11 +152,15 @@ const speechBubbleTexts = [
       "I'm open for work!\nHit me up and let's\nbuild something\nawesome!",
     duration: 2500,
     async callback() {
-      const contactBtn = document.querySelector("#contact-btn") as HTMLElement;
+      const contactBtn = document.querySelector(
+        "#contact-btn"
+      ) as HTMLElement | null;
 
-      contactBtn.focus();
-      await delay(2500);
-      contactBtn.blur();
+      if (contactBtn) {
+        contactBtn.focus();
+        await delay(2500);
+        contactBtn.blur();
+      }
     },
   },
 ];
@@ -176,10 +186,7 @@ const SpeechBubble = () => {
   }, []);
 
   return (
-    <div
-      className="hidden md:block absolute left-1/2 -top-24"
-      style={{ left: "calc(50% + 50px)" }}
-    >
+    <>
       <motion.svg
         initial="hidden"
         animate="visible"
@@ -210,7 +217,7 @@ const SpeechBubble = () => {
           className="font-mono"
         />
       </div>
-    </div>
+    </>
   );
 };
 
@@ -226,7 +233,12 @@ const Home: NextPage = () => {
         variants={infoVariants}
         className="relative container mx-auto self-center text-center mt-10 px-4"
       >
-        <SpeechBubble />
+        <div
+          className="hidden md:block absolute left-1/2 -top-24"
+          style={{ left: "calc(50% + 50px)" }}
+        >
+          <SpeechBubble />
+        </div>
         <Image
           className="z-1"
           src="/assets/images/avatar.svg"
@@ -237,7 +249,9 @@ const Home: NextPage = () => {
           priority
         />
         <h1 className="font-bold mt-2 text-3xl md:text-4xl">Eugen Voloșciuc</h1>
-        <h2 className="font-semibold text-lg md:text-xl">Web developer</h2>
+        <h2 className="font-semibold text-lg md:text-xl mt-2">
+          Problem-solving web developer
+        </h2>
         <p className="mt-2 max-w-xl mx-auto md:text-lg">
           I can help your start-up and agency achieve high quality websites and
           exceptional user experience.
