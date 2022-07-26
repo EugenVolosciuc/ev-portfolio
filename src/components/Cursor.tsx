@@ -61,14 +61,8 @@ export const useCursorRotation = (
       }
 
       // Focus element
-      if (shouldFocus) {
-        if (
-          previousClosestElementToCursor &&
-          document.activeElement === previousClosestElementToCursor
-        )
-          (previousClosestElementToCursor as unknown as HTMLElement).blur();
-        if (closestElementToCursor)
-          (closestElementToCursor as unknown as HTMLElement).focus();
+      if (shouldFocus && closestElementToCursor) {
+        (closestElementToCursor as unknown as HTMLElement).focus();
       }
     };
 
