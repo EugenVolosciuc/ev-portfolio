@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import { useForm, ValidationError } from "@formspree/react";
 
 import { Layout, Button } from "components";
@@ -11,6 +12,9 @@ const Contact: NextPage = () => {
 
   return (
     <Layout>
+      <Head>
+        <title>Contact | Eugen Volosciuc</title>
+      </Head>
       <div className="container mx-auto max-w-prose pt-16 px-4">
         <h1 className="font-extrabold text-4xl mb-2">Let&apos;s connect</h1>
         <p className="mb-4">

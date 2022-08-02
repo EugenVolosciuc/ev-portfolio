@@ -1,4 +1,5 @@
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
+import Head from "next/head";
 import fs from "fs";
 import matter from "gray-matter";
 import md from "markdown-it";
@@ -11,6 +12,9 @@ const About = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout>
+      <Head>
+        <title>About me | Eugen Volosciuc</title>
+      </Head>
       <div className={`${markdownProseClasses} mx-auto pt-16 px-4`}>
         <div
           dangerouslySetInnerHTML={{

@@ -14,10 +14,12 @@ import Head from "next/head";
 type BlogPostWithContent = TBlogPost & { content: string };
 
 const BlogPost = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const title = `${post.frontmatter.title} | Eugen Volosciuc`;
+
   return (
     <Layout>
       <Head>
-        <title>{post.frontmatter.title} | Eugen Volosciuc</title>
+        <title>{title}</title>
         <meta name="description" content={post.frontmatter.catchphrase} />
       </Head>
       <div className={`${markdownProseClasses} mx-auto pt-16 px-4`}>

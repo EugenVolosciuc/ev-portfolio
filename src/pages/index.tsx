@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import type { NextPage } from "next";
+import Head from "next/head";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 
 import { AnimatedText, Button, Cursor } from "components";
 import Image from "next/image";
 import { useCursorRotation } from "components/Cursor";
-import delay from "types/delay";
+import delay from "utils/delay";
 
 type ButtonMovementDirection =
   | "top-left"
@@ -18,6 +19,9 @@ type ButtonVariantsCustom = {
   i: number;
   direction: ButtonMovementDirection;
 };
+
+const carreerStart = 2019;
+const yearsOfExperience = new Date().getFullYear() - carreerStart;
 
 const buttonDisplacement = 25;
 const initButtonsDelay = 0.15;
@@ -226,6 +230,9 @@ const Home: NextPage = () => {
 
   return (
     <div className="cursor-none h-screen flex relative">
+      <Head>
+        <title>Eugen Volosciuc</title>
+      </Head>
       <Cursor />
       <motion.main
         initial="hidden"
@@ -253,8 +260,8 @@ const Home: NextPage = () => {
           Problem-solving web developer
         </h2>
         <p className="mt-2 max-w-xl mx-auto md:text-lg">
-          I can help your start-up and agency achieve high quality websites and
-          exceptional user experience.
+          {yearsOfExperience}+ years of helping start-ups and agencies build
+          high quality websites and achieve exceptional user experience
         </p>
       </motion.main>
       <nav className="absolute w-full flex justify-between p-6 md:p-10">
