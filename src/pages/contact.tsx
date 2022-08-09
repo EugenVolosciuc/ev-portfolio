@@ -26,15 +26,21 @@ const Contact: NextPage = () => {
           <a
             href="https://www.linkedin.com/in/eugen-volosciuc/"
             target="_blank"
+            rel="noreferrer"
           >
             <FaLinkedin className="text-2xl" title="LinkedIn Profile" />
           </a>
-          <a href="https://medium.com/@volosciuc-eugen" target="_blank">
+          <a
+            href="https://medium.com/@volosciuc-eugen"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaMedium className="text-2xl" title="Medium Profile" />
           </a>
           <a
             href="https://stackoverflow.com/users/12058223/eugen-volo%c8%99ciuc"
             target="_blank"
+            rel="noreferrer"
           >
             <FaStackOverflow
               className="text-2xl"
