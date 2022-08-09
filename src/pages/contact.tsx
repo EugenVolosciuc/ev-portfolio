@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useForm, ValidationError } from "@formspree/react";
+import { FaLinkedin, FaMedium, FaStackOverflow } from "react-icons/fa";
 
 import { Layout, Button } from "components";
 
@@ -16,19 +17,38 @@ const Contact: NextPage = () => {
         <title>Contact | Eugen Volosciuc</title>
       </Head>
       <div className="container mx-auto max-w-prose pt-16 px-4">
-        <h1 className="font-extrabold text-4xl mb-2">Let&apos;s connect</h1>
+        <h1 className="font-extrabold text-4xl mb-2">Let&apos;s connect!</h1>
         <p className="mb-4">
           If you&apos;ve got a project on your hands that needs a helping hand
-          with its frontend or backend, let&apos;s talk!
+          with its frontend or backend, let&apos;s talk.
         </p>
-        {/* TODO: add social stuff */}
+        <div className="flex justify-around mb-4 mt-2">
+          <a
+            href="https://www.linkedin.com/in/eugen-volosciuc/"
+            target="_blank"
+          >
+            <FaLinkedin className="text-2xl" title="LinkedIn Profile" />
+          </a>
+          <a href="https://medium.com/@volosciuc-eugen" target="_blank">
+            <FaMedium className="text-2xl" title="Medium Profile" />
+          </a>
+          <a
+            href="https://stackoverflow.com/users/12058223/eugen-volo%c8%99ciuc"
+            target="_blank"
+          >
+            <FaStackOverflow
+              className="text-2xl"
+              title="StackOverflow Profile"
+            />
+          </a>
+        </div>
         <hr className="mb-4" />
         <form onSubmit={handleSubmit} className="flex flex-col">
-          <label className="font-semibold" htmlFor="name">
+          <label className="font-semibold mb-1" htmlFor="name">
             What should I call you?
           </label>
           <input className={inputClasses} id="name" name="name" required />
-          <label className="font-semibold" htmlFor="email">
+          <label className="font-semibold mb-1" htmlFor="email">
             Email
           </label>
           <input
@@ -39,7 +59,7 @@ const Contact: NextPage = () => {
             required
           />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
-          <label className="font-semibold" htmlFor="message">
+          <label className="font-semibold mb-1" htmlFor="message">
             Message
           </label>
           <textarea
