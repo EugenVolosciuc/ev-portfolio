@@ -4,6 +4,9 @@ catchphrase: "No more Google Fonts urls in your app."
 date: '2022-01-19'
 categories:
   - Development
+tags:
+  - NextJS
+  - Fonts
 ---
 
 Let’s say you received a custom font from your client for a NextJS project you’re working on. Considering that all of the fonts you used so far were taken from Google Fonts or some other font provider, how do you add this new font? This seemingly easy thing to implement took quite some time to do as it is not documented in the NextJS docs. This article should help you with that.

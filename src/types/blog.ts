@@ -6,6 +6,7 @@ export type BlogPost = {
     date: string;
     categories: BlogPostCategories[];
     catchphrase: string;
+    tags: string[];
   };
 };
 

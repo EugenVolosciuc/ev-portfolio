@@ -1,4 +1,6 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
+import Head from "next/head";
+import Link from "next/link";
 import { ParsedUrlQuery } from "querystring";
 import fs from "fs";
 import matter from "gray-matter";
@@ -6,10 +8,9 @@ import md from "markdown-it";
 import dayjs from "dayjs";
 
 import calculateReadTime from "utils/calculate-read-time";
-import { Layout } from "components";
+import { Layout, Tag } from "components";
 import { BlogPost as TBlogPost } from "types/blog";
 import { markdownProseClasses } from "constants/classnames";
-import Head from "next/head";
 
 type BlogPostWithContent = TBlogPost & { content: string };
 
@@ -31,7 +32,22 @@ const BlogPost = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
           <span> | </span>
           <span>{post.readTime} min read</span>
         </div>
+        <div>
+          {post.frontmatter.tags.map((tag) => (
+            <Link
+              key={`blog-post-tag-${tag}`}
+              href="/blog/tag/[tag]"
+              as={`/blog/tag/${tag}`}
+              passHref
+            >
+              <a className="mr-2">
+                <Tag>{tag}</Tag>
+              </a>
+            </Link>
+          ))}
+        </div>
         <div
+          className="pb-4"
           dangerouslySetInnerHTML={{
             __html: md({ html: true }).render(post.content),
           }}

@@ -1,31 +1,13 @@
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import fs from "fs";
 import matter from "gray-matter";
-import dayjs from "dayjs";
-import Link from "next/link";
 import Head from "next/head";
 
-import { Layout } from "components";
-import { BlogPost as TBlogPost } from "types/blog";
+import { Layout, BlogPostListItem } from "components";
+import { BlogPost } from "types/blog";
 import calculateReadTime from "utils/calculate-read-time";
-
-const BlogPost = ({ post }: { post: TBlogPost }) => {
-  const { title, catchphrase, date } = post.frontmatter;
-
-  return (
-    <div className="mb-2">
-      <Link href="/blog/[slug]" as={`/blog/${post.slug}`} passHref>
-        <a className="font-bold text-xl">{title}</a>
-      </Link>
-      <p className="mb-2">{catchphrase}</p>
-      <div className="text-xs">
-        <span>{dayjs(date, "YYYY-MM-DD").format("DD MMMM YYYY")}</span>
-        <span> | </span>
-        <span>{post.readTime} min read</span>
-      </div>
-    </div>
-  );
-};
+import dayjs from "dayjs";
+import sortBlogPosts from "utils/sort-blog-posts";
 
 const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
@@ -45,7 +27,7 @@ const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
         </p>
         <hr className="mb-4" />
         {posts.map((post) => (
-          <BlogPost key={post.slug} post={post} />
+          <BlogPostListItem key={post.slug} post={post} />
         ))}
       </div>
     </Layout>
@@ -55,7 +37,7 @@ const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
 export default Blog;
 
 export const getStaticProps: GetStaticProps<{
-  posts: TBlogPost[];
+  posts: BlogPost[];
 }> = async () => {
   const files = fs.readdirSync("src/content/blog-posts");
 
@@ -71,12 +53,12 @@ export const getStaticProps: GetStaticProps<{
       slug,
       frontmatter,
       readTime: calculateReadTime(content, true),
-    } as TBlogPost;
+    } as BlogPost;
   });
 
   return {
     props: {
-      posts,
+      posts: sortBlogPosts(posts, "DESC"),
     },
   };
 };
