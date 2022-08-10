@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "next dev",
+    "lint": "next lint",
+    "postbuild": "next-sitemap",
+    "start": "next start"
   },
   "dependencies": {
     "@formspree/react": "^2.3.0",
@@ -17,6 +18,7 @@
     "markdown-it": "^13.0.1",
     "markdown-to-txt": "^2.0.1",
     "next": "12.2.3",
+    "next-sitemap": "^3.1.17",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0"
