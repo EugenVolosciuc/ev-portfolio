@@ -56,7 +56,7 @@ CLI: [<img src="/assets/images/technologies/ts.svg" title="Typescript" alt="Type
 ## Auto Iordache
 [Website](https://autoiordache.ro/)
 
-We've all got to start somewhere, right? This is the first paid customer I ever had as a freelancer. While on one of my driving lessons, my driving instructor told me that he needs a website for his school, and so we made a deal for it. Not the most fascinating of works, that's for sure, but it was pivotal point for me as a web developer.
+We've all got to start somewhere, right? This is the first paid customer I ever had as a freelancer. While on one of my driving lessons, my driving instructor told me that he needs a website for his school, and so we made a deal for it. Not the most fascinating of works, that's for sure, but it was a pivotal point for me as a web developer.
 
 <img src="/assets/images/projects/auto-iordache-1.png" title="Homepage 1" alt="Homepage 1" />
 <img src="/assets/images/projects/auto-iordache-2.png" title="Homepage 2" alt="Homepage 2" />

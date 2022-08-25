@@ -231,7 +231,7 @@ const Home: NextPage = () => {
   return (
     <div className="cursor-none h-screen flex relative">
       <Head>
-        <title>Eugen Volosciuc</title>
+        <title>Eugen Volosciuc | Software Developer</title>
       </Head>
       <Cursor />
       <motion.main

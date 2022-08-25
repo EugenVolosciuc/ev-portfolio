@@ -14,3 +14,5 @@ I have a serious passion for technology, interested in the frontend spectrum and
 </table>
 
 When I'm not thinking about how to create the next unicorn, I'm spending time with my family: my wonderful wife and our two cats - Otto and Mina. I'm fond of Japanese culture, learned the language for around two years but left it aside because of time constraints, unfortunately.
+
+<img src="/assets/images/about-me/kanji_study.jpg" title="Kanji study" alt="Kanji study" />

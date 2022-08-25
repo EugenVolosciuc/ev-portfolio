@@ -1,7 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useForm, ValidationError } from "@formspree/react";
-import { FaLinkedin, FaMedium, FaStackOverflow } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaMedium,
+  FaStackOverflow,
+  FaFilePdf,
+} from "react-icons/fa";
 
 import { Layout, Button } from "components";
 
@@ -46,6 +51,9 @@ const Contact: NextPage = () => {
               className="text-2xl"
               title="StackOverflow Profile"
             />
+          </a>
+          <a href="/assets/EV_CV.pdf" download={true}>
+            <FaFilePdf className="text-2xl" title="Resume" />
           </a>
         </div>
         <hr className="mb-4" />
