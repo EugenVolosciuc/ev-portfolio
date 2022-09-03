@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-	overflow-x: hidden;
+html,
+body {
+  overflow-x: hidden;
+  font-family: Lora;
 }
 
 .gist-data tr {
-	border-bottom-width: 0px
+  border-bottom-width: 0px;
 }

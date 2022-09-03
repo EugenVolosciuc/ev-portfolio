@@ -207,7 +207,7 @@ const SpeechBubble = () => {
           variants={speechBubblePathVariants}
           strokeWidth={3}
           d="M86 140C132.944 140 171 108.884 171 70.5C171 32.1162 132.944 1 86 1C39.0558 1 1 32.1162 1 70.5C1 87.746 8.68247 103.525 21.4019 115.673L13 145.5L44.7338 131.275C56.9534 136.833 71.0244 140 86 140Z"
-          stroke="black"
+          stroke="rgb(30, 41, 59)"
         />
       </motion.svg>
       <div
@@ -218,7 +218,7 @@ const SpeechBubble = () => {
           text={speechBubbleTexts[currentTextIndex].content}
           delay={speechBubbleLoaded.current ? 0 : speachBubbleDuration}
           duration={speechBubbleTexts[currentTextIndex].duration / 100000}
-          className="font-mono"
+          className="font-RobotoMono"
         />
       </div>
     </>
@@ -256,12 +256,22 @@ const Home: NextPage = () => {
           priority
         />
         <h1 className="font-bold mt-2 text-3xl md:text-4xl">Eugen Voloșciuc</h1>
-        <h2 className="font-semibold text-lg md:text-xl mt-2">
+        {/* <h2 className="font-semibold text-lg md:text-xl mt-2">
           Problem-solving web developer
-        </h2>
-        <p className="mt-2 max-w-xl mx-auto md:text-lg">
+        </h2> */}
+        <p className="mt-2 max-w-xl mx-auto md:text-lg text-gray-500">
           {yearsOfExperience}+ years of helping start-ups and agencies build
           high quality websites and achieve exceptional user experience
+        </p>
+        <p className="mt-4 text-gray-500">
+          Currently working on{" "}
+          <a
+            href="https://www.fejoblist.com"
+            target="_blank"
+            className="ml-1 transition-all rounded-md focus:text-white focus:no-underline focus:px-4 focus:py-1 focus:bg-slate-800 underline underline-offset-2"
+          >
+            Frontend JobList
+          </a>
         </p>
       </motion.main>
       <nav className="absolute w-full flex justify-between p-6 md:p-10">

@@ -4,6 +4,7 @@ Besides work, I'm always trying to keep up with the ever-changing landscape of w
 ---
 ## JobList
 [Website](http://www.fejoblist.com/)
+[Twitter](https://twitter.com/fejoblist)
 
 JobList is a series of web platforms for specialized job boards. At the moment, there are two websites being worked on - frontend and 3D. Easy to use, these websites can help recruiters seek new talent in their field of work, and help job seekers search and find openings that tick their criteria. Recruiters are always able to modify their opening in any way through an edit link they receive through email once the job post is created.
 

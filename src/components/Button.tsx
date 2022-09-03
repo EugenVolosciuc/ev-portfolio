@@ -31,7 +31,7 @@ const Button = forwardRef<
       id={id}
       onClick={onClick}
       href={href}
-      className={`px-4 py-1 font-semibold rounded-md border-2 border-black transition-colors bg-white hover:bg-black hover:text-white focus:bg-slate-800 focus:text-white ${disabledClasses}`}
+      className={`btn px-4 py-1 font-semibold rounded-md border-2 border-slate-800 transition-colors bg-white hover:bg-slate-800 hover:text-white focus:bg-slate-800 focus:text-white ${disabledClasses}`}
       // @ts-ignore
       ref={ref}
       type={type}

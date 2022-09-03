@@ -48,7 +48,8 @@ const AnimatedText: FC<Props> = ({
         return (
           <motion.p
             key={sentence} // https://stackoverflow.com/questions/69051279/how-to-animate-on-each-state-change-using-framer-motion
-            className={`flex flex-wrap overflow-hidden text-sm ${className}`}
+            className={`flex flex-wrap overflow-hidden ${className}`}
+            style={{ fontSize: "13px" }}
             variants={container}
             initial="hidden"
             animate="visible"
