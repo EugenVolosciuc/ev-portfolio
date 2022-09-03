@@ -97,7 +97,8 @@ const Contact: NextPage = () => {
           <div className="mt-2">
             <Button
               type="submit"
-              disabled={state.submitting || state.succeeded}
+              // disabled={state.submitting || state.succeeded}
+              disabled
             >
               Submit
             </Button>

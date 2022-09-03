@@ -23,15 +23,15 @@ const Button = forwardRef<
   const As = href ? "a" : "button";
 
   const disabledClasses = disabled
-    ? "bg-slate-500 text-white border-slate-500 hover:bg-slate-500"
-    : "";
+    ? "decoration-slate-500 text-slate-500 cursor-not-allowed"
+    : "focus:no-underline hover:no-underline hover:bg-slate-800 hover:text-white focus:bg-slate-800 focus:text-white";
 
   return (
     <As
       id={id}
       onClick={onClick}
       href={href}
-      className={`btn px-4 py-1 font-semibold rounded-md border-2 border-slate-800 transition-colors bg-white hover:bg-slate-800 hover:text-white focus:bg-slate-800 focus:text-white ${disabledClasses}`}
+      className={`my-1 mx-4 bg-white transition-all font-semibold rounded-md underline underline-offset-2  hover:px-4 hover:m-0 focus:m-0 hover:py-1 focus:px-4 focus:py-1  ${disabledClasses}`}
       // @ts-ignore
       ref={ref}
       type={type}

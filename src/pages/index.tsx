@@ -153,7 +153,7 @@ const speechBubbleTexts = [
   },
   {
     content:
-      "I'm open for work!\nHit me up and let's\nbuild something\nawesome!",
+      "Let's connect!\nI'd love to hear from\nyou and work on the\nnext big thing!",
     duration: 2500,
     async callback() {
       const contactBtn = document.querySelector(
@@ -256,9 +256,6 @@ const Home: NextPage = () => {
           priority
         />
         <h1 className="font-bold mt-2 text-3xl md:text-4xl">Eugen Voloșciuc</h1>
-        {/* <h2 className="font-semibold text-lg md:text-xl mt-2">
-          Problem-solving web developer
-        </h2> */}
         <p className="mt-2 max-w-xl mx-auto md:text-lg text-gray-500">
           {yearsOfExperience}+ years of helping start-ups and agencies build
           high quality websites and achieve exceptional user experience
@@ -274,7 +271,7 @@ const Home: NextPage = () => {
           </a>
         </p>
       </motion.main>
-      <nav className="absolute w-full flex justify-between p-6 md:p-10">
+      <nav className="absolute w-full flex justify-between p-6">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -296,7 +293,7 @@ const Home: NextPage = () => {
           </Link>
         </motion.div>
       </nav>
-      <nav className="absolute w-full flex justify-between p-6 md:p-10 bottom-0">
+      <nav className="absolute w-full flex justify-between p-6 bottom-0">
         <motion.div
           initial="hidden"
           animate="visible"
