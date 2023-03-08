@@ -106,7 +106,7 @@ const menuItems = {
   },
   blog: {
     label: "Blog",
-    url: "/blog",
+    url: "https://medium.com/@volosciuc-eugen",
   },
   projects: {
     label: "Projects",
