@@ -263,12 +263,12 @@ const Home: NextPage = () => {
         <p className="mt-4 text-gray-500">
           Currently working on{" "}
           <a
-            href="https://www.fejoblist.com"
+            href="https://leadfinderhq.com"
             target="_blank"
             rel="noreferrer"
             className="ml-1 transition-all rounded-md focus:text-white focus:no-underline focus:px-4 focus:py-1 focus:bg-slate-800 underline underline-offset-2"
           >
-            Frontend JobList
+            LeadFinderHQ
           </a>
         </p>
       </motion.main>
