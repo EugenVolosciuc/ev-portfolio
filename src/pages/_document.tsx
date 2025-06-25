@@ -6,7 +6,6 @@ import Document, {
   Main,
   NextScript,
 } from "next/document";
-import Script from "next/script";
 
 class MyDocument extends Document {
   static async getInitialProps(
@@ -21,22 +20,11 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <Script
-            id="gtm-script-1"
-            strategy="lazyOnload"
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-          />
-
-          <Script id="gtm-script-2" strategy="lazyOnload">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-              page_path: window.location.pathname,
-              });
-            `}
-          </Script>
+          <script
+            defer
+            src="https://cloud.umami.is/script.js"
+            data-website-id="fbd0eaa2-daa7-429a-8557-13e88218650c"
+          ></script>
           <link
             rel="preload"
             href="/fonts/RobotoMono-Regular.ttf"
