@@ -263,12 +263,11 @@ const Home: NextPage = () => {
         <p className="mt-4 text-gray-500">
           Currently working on{" "}
           <a
-            href="https://leadfinderhq.com"
+            href="https://legitcandidate.com"
             target="_blank"
-            rel="noreferrer"
             className="ml-1 transition-all rounded-md focus:text-white focus:no-underline focus:px-4 focus:py-1 focus:bg-slate-800 underline underline-offset-2"
           >
-            LeadFinderHQ
+            Legit Candidate
           </a>
         </p>
       </motion.main>
