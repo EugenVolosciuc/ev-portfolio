@@ -1,8 +1,8 @@
 # A little about me
 
-**Hi, I'm Eugen**. I'm a web developer working on both frontend and backend with over 6+ years of experience in a wide range of digital products. I've got a diverse set of skills, ranging from React, Redux, NextJS, Ant Design, ChakraUI and other frontend libraries to NodeJS, NestJS, Express, Prisma, AWS, tRPC etc. I like my code typed, so I'm a big advocate for Typescript.
+**Hi, I'm Eugen**. I'm a web developer working on both frontend and backend with over 7+ years of experience in a wide range of digital products. I've got a diverse set of skills, ranging from React, Redux, NextJS, Ant Design, ChakraUI and other frontend libraries to NodeJS, NestJS, Express, Prisma, AWS, tRPC etc. I like my code typed, so I'm a big advocate for Typescript.
 
-I have a serious passion for technology, interested in the frontend spectrum and working on ambitious projects with positive people. Throughout the years I gathered knowledge while working at multiple companies. I'm currently working remotely at [TechQuarter](https://www.techquarter.io/), an agency based in Cluj, Romania.
+I have a serious passion for technology, interested in the frontend spectrum and working on ambitious projects with positive people. Throughout the years I gathered knowledge while working at multiple companies. I'm currently working remotely at [Pie Insurance](https://www.pieinsurance.com/).
 
 <table>
 	<tr>

@@ -258,16 +258,20 @@ const Home: NextPage = () => {
         <h1 className="font-bold mt-2 text-3xl md:text-4xl">Eugen Voloșciuc</h1>
         <p className="mt-2 max-w-xl mx-auto md:text-lg text-gray-500">
           {yearsOfExperience}+ years of helping start-ups and agencies build
-          high quality websites and achieve exceptional user experience
+          high quality websites and achieve exceptional user experience.
         </p>
         <p className="mt-4 text-gray-500">
           Currently working on{" "}
           <a
-            href="https://legitcandidate.com"
+            href="https://ivisign.com"
             className="ml-1 transition-all rounded-md focus:text-white focus:no-underline focus:px-4 focus:py-1 focus:bg-slate-800 underline underline-offset-2"
           >
-            Legit Candidate
+            ivisign
           </a>
+          ,
+        </p>
+        <p className="mt-0.5 text-gray-500">
+          the API-first e-signature tool that doesn't cost a fortune.
         </p>
       </motion.main>
       <nav className="absolute w-full flex justify-between p-6">
