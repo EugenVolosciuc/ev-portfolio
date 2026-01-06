@@ -271,7 +271,7 @@ const Home: NextPage = () => {
           ,
         </p>
         <p className="mt-0.5 text-gray-500">
-          the API-first e-signature tool that doesn't cost a fortune.
+          the API-first e-signature tool that doesn&apos;t cost a fortune.
         </p>
       </motion.main>
       <nav className="absolute w-full flex justify-between p-6">
