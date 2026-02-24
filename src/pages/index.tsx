@@ -128,7 +128,7 @@ const speechBubbleTexts = [
     duration: 2500,
     callback() {
       const projectsBtn = document.querySelector(
-        "#projects-btn"
+        "#projects-btn",
       ) as HTMLElement | null;
       if (projectsBtn) projectsBtn.focus();
     },
@@ -138,7 +138,7 @@ const speechBubbleTexts = [
     duration: 2500,
     callback() {
       const aboutBtn = document.querySelector(
-        "#about-btn"
+        "#about-btn",
       ) as HTMLElement | null;
       if (aboutBtn) aboutBtn.focus();
     },
@@ -157,7 +157,7 @@ const speechBubbleTexts = [
     duration: 2500,
     async callback() {
       const contactBtn = document.querySelector(
-        "#contact-btn"
+        "#contact-btn",
       ) as HTMLElement | null;
 
       if (contactBtn) {
@@ -263,15 +263,15 @@ const Home: NextPage = () => {
         <p className="mt-4 text-gray-500">
           Currently working on{" "}
           <a
-            href="https://ivisign.com"
+            href="https://webfold.io"
             className="ml-1 transition-all rounded-md focus:text-white focus:no-underline focus:px-4 focus:py-1 focus:bg-slate-800 underline underline-offset-2"
           >
-            ivisign
+            webfold.io
           </a>
           ,
         </p>
         <p className="mt-0.5 text-gray-500">
-          the API-first e-signature tool that doesn&apos;t cost a fortune.
+          the easiest way to create a beautiful website from your Google Docs.
         </p>
       </motion.main>
       <nav className="absolute w-full flex justify-between p-6">
