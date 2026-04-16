@@ -36,13 +36,10 @@ const BlogPost = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
           {post.frontmatter.tags.map((tag) => (
             <Link
               key={`blog-post-tag-${tag}`}
-              href="/blog/tag/[tag]"
-              as={`/blog/tag/${tag}`}
-              passHref
+              href={`/blog/tag/${tag}`}
+              className="mr-2"
             >
-              <a className="mr-2">
-                <Tag>{tag}</Tag>
-              </a>
+              <Tag>{tag}</Tag>
             </Link>
           ))}
         </div>

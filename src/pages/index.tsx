@@ -247,11 +247,10 @@ const Home: NextPage = () => {
           <SpeechBubble />
         </div>
         <Image
-          className="z-1"
+          className="z-1 mx-auto"
           src="/assets/images/avatar.svg"
-          layout="intrinsic"
-          width="180px"
-          height="180px"
+          width={180}
+          height={180}
           alt="Eugen's avatar"
           priority
         />
@@ -281,7 +280,7 @@ const Home: NextPage = () => {
           variants={buttonVariants}
           custom={{ i: 0, direction: "top-left" }}
         >
-          <Link href={menuItems.about.url} passHref>
+          <Link href={menuItems.about.url} legacyBehavior passHref>
             <Button id="about-btn">{menuItems.about.label}</Button>
           </Link>
         </motion.div>
@@ -291,9 +290,7 @@ const Home: NextPage = () => {
           variants={buttonVariants}
           custom={{ i: 1, direction: "top-right" }}
         >
-          <Link href={menuItems.blog.url} passHref>
-            <Button id="blog-btn">{menuItems.blog.label}</Button>
-          </Link>
+          <Button id="blog-btn" href={menuItems.blog.url}>{menuItems.blog.label}</Button>
         </motion.div>
       </nav>
       <nav className="absolute w-full flex justify-between p-6 bottom-0">
@@ -303,7 +300,7 @@ const Home: NextPage = () => {
           variants={buttonVariants}
           custom={{ i: 2, direction: "bottom-left" }}
         >
-          <Link href={menuItems.projects.url} passHref>
+          <Link href={menuItems.projects.url} legacyBehavior passHref>
             <Button id="projects-btn">{menuItems.projects.label}</Button>
           </Link>
         </motion.div>
@@ -313,7 +310,7 @@ const Home: NextPage = () => {
           variants={buttonVariants}
           custom={{ i: 3, direction: "bottom-right" }}
         >
-          <Link href={menuItems.contact.url} passHref>
+          <Link href={menuItems.contact.url} legacyBehavior passHref>
             <Button id="contact-btn">{menuItems.contact.label}</Button>
           </Link>
         </motion.div>

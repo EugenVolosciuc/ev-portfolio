@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useForm, ValidationError } from "@formspree/react";
 import {
   FaLinkedin,
   FaMedium,
@@ -8,14 +7,9 @@ import {
   FaFilePdf,
 } from "react-icons/fa";
 
-import { Layout, Button } from "components";
-
-const inputClasses =
-  "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4";
+import { Layout } from "components";
 
 const Contact: NextPage = () => {
-  const [state, handleSubmit] = useForm("xoqrgrey");
-
   return (
     <Layout>
       <Head>
@@ -56,54 +50,6 @@ const Contact: NextPage = () => {
             <FaFilePdf className="text-2xl" title="Resume" />
           </a>
         </div>
-        <hr className="mb-4" />
-        <form onSubmit={handleSubmit} className="flex flex-col">
-          <label className="font-semibold mb-1" htmlFor="name">
-            What should I call you?
-          </label>
-          <input className={inputClasses} id="name" name="name" required />
-          <label className="font-semibold mb-1" htmlFor="email">
-            Email
-          </label>
-          <input
-            className={inputClasses}
-            id="email"
-            type="email"
-            name="email"
-            required
-          />
-          <ValidationError prefix="Email" field="email" errors={state.errors} />
-          <label className="font-semibold mb-1" htmlFor="message">
-            Message
-          </label>
-          <textarea
-            rows={8}
-            className={inputClasses}
-            id="message"
-            name="message"
-            required
-          />
-          <ValidationError
-            prefix="Message"
-            field="message"
-            errors={state.errors}
-          />
-          {state.succeeded && (
-            <p className="mb-2 text-green-700">
-              Thank you for getting in touch! I&apos;ll come back with a reply
-              as soon as possible.
-            </p>
-          )}
-          <div className="mt-2">
-            <Button
-              type="submit"
-              // disabled={state.submitting || state.succeeded}
-              disabled
-            >
-              Submit
-            </Button>
-          </div>
-        </form>
       </div>
     </Layout>
   );
