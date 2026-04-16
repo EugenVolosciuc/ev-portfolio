@@ -280,9 +280,7 @@ const Home: NextPage = () => {
           variants={buttonVariants}
           custom={{ i: 0, direction: "top-left" }}
         >
-          <Link href={menuItems.about.url} legacyBehavior passHref>
-            <Button id="about-btn">{menuItems.about.label}</Button>
-          </Link>
+          <Button id="about-btn" href={menuItems.about.url}>{menuItems.about.label}</Button>
         </motion.div>
         <motion.div
           initial="hidden"
@@ -300,9 +298,7 @@ const Home: NextPage = () => {
           variants={buttonVariants}
           custom={{ i: 2, direction: "bottom-left" }}
         >
-          <Link href={menuItems.projects.url} legacyBehavior passHref>
-            <Button id="projects-btn">{menuItems.projects.label}</Button>
-          </Link>
+          <Button id="projects-btn" href={menuItems.projects.url}>{menuItems.projects.label}</Button>
         </motion.div>
         <motion.div
           initial="hidden"
@@ -310,9 +306,7 @@ const Home: NextPage = () => {
           variants={buttonVariants}
           custom={{ i: 3, direction: "bottom-right" }}
         >
-          <Link href={menuItems.contact.url} legacyBehavior passHref>
-            <Button id="contact-btn">{menuItems.contact.label}</Button>
-          </Link>
+          <Button id="contact-btn" href={menuItems.contact.url}>{menuItems.contact.label}</Button>
         </motion.div>
       </nav>
     </div>
