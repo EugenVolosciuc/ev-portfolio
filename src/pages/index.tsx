@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 
 import { AnimatedText, Button, Cursor } from "components";
@@ -260,17 +259,14 @@ const Home: NextPage = () => {
           high quality websites and achieve exceptional user experience.
         </p>
         <p className="mt-4 text-gray-500">
-          Currently working on{" "}
+          Currently{" "}
           <a
-            href="https://webfold.io"
+            href="/japanese"
             className="ml-1 transition-all rounded-md focus:text-white focus:no-underline focus:px-4 focus:py-1 focus:bg-slate-800 underline underline-offset-2"
           >
-            webfold.io
+            learning Japanese
           </a>
-          ,
-        </p>
-        <p className="mt-0.5 text-gray-500">
-          the easiest way to create a beautiful website from your Google Docs.
+          {" "}and writing about the journey.
         </p>
       </motion.main>
       <nav className="absolute w-full flex justify-between p-6">

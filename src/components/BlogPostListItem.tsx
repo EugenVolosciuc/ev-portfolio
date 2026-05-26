@@ -9,7 +9,11 @@ const BlogPostListItem = ({ post }: { post: BlogPost }) => {
 
   return (
     <div className="mb-6">
-      <Link href="/blog/[slug]" as={`/blog/${post.slug}`} className="font-bold text-xl">
+      <Link
+        href="/blog/[slug]"
+        as={`/blog/${post.slug}`}
+        className="font-bold text-xl"
+      >
         {title}
       </Link>
       <p className="mb-2">{catchphrase}</p>
@@ -26,9 +30,7 @@ const BlogPostListItem = ({ post }: { post: BlogPost }) => {
             as={`/blog/tag/${tag}`}
             className="mr-2"
           >
-
             <Tag>{tag}</Tag>
-
           </Link>
         ))}
       </div>
