@@ -29,7 +29,7 @@ async function wkFetchAllPages(endpoint: string, token: string) {
   let url: string | null = `${BASE_URL}${endpoint}`;
 
   while (url) {
-    const res = await fetch(url, {
+    const res: any = await fetch(url, {
       headers: {
         Authorization: `Bearer ${token}`,
         "Wanikani-Revision": "20170710",
