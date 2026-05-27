@@ -198,10 +198,6 @@ export const getStaticProps: GetStaticProps<JapanesePageProps> = async () => {
       : Promise.resolve([]),
   ]);
 
-  console.log("wanikani", wanikani);
-  console.log("bunpro", bunpro);
-  console.log("studyLog", studyLog);
-
   return {
     props: {
       wanikani,

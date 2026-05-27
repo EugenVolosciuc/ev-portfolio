@@ -56,7 +56,7 @@ const AnimatedText: FC<Props> = ({
             {...props}
           >
             {letters.map((letter, index) => (
-              <motion.span key={index} variants={child}>
+              <motion.span key={letter + index} variants={child}>
                 {letter === " " ? "\u00A0" : letter}
               </motion.span>
             ))}

@@ -136,8 +136,6 @@ async function fetchWordOfTheDay(token: string): Promise<WordOfTheDay | null> {
   const subjectJson = await wkFetch(`/subjects/${picked.subject_id}`, token);
   const subject = subjectJson.data;
 
-  console.log("subject", subject);
-
   return {
     characters: subject.characters || "?",
     meanings: subject.meanings

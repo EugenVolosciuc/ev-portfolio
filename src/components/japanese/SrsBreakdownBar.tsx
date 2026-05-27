@@ -34,7 +34,7 @@ const SrsBreakdownBar = ({ breakdown, label }: Props) => {
 
           return (
             <motion.div
-              key={key}
+              key={key + stageLabel}
               className="h-full relative cursor-pointer"
               style={{ backgroundColor: color }}
               initial={{ width: 0 }}
@@ -57,7 +57,10 @@ const SrsBreakdownBar = ({ breakdown, label }: Props) => {
           const count = breakdown[key];
           if (count === 0) return null;
           return (
-            <div key={key} className="flex items-center gap-1.5 text-xs text-gray-600">
+            <div
+              key={key}
+              className="flex items-center gap-1.5 text-xs text-gray-600"
+            >
               <div
                 className="w-2.5 h-2.5 rounded-full"
                 style={{ backgroundColor: color }}

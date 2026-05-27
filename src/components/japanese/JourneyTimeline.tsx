@@ -36,7 +36,7 @@ const JourneyTimeline = ({ levelProgressions, currentLevel }: Props) => {
 
             return (
               <motion.div
-                key={lp.level}
+                key={lp.level + i}
                 className="flex items-center gap-4 pl-6 relative"
                 initial={{ opacity: 0, x: -20 }}
                 animate={
@@ -65,7 +65,9 @@ const JourneyTimeline = ({ levelProgressions, currentLevel }: Props) => {
                   ) : (
                     <div
                       className="w-3 h-3 rounded-full border-2 bg-white"
-                      style={{ borderColor: lp.passed_at ? "#EEB868" : "#d1d5db" }}
+                      style={{
+                        borderColor: lp.passed_at ? "#EEB868" : "#d1d5db",
+                      }}
                     />
                   )}
                 </div>

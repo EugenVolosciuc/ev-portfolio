@@ -265,8 +265,8 @@ const Home: NextPage = () => {
             className="ml-1 transition-all rounded-md focus:text-white focus:no-underline focus:px-4 focus:py-1 focus:bg-slate-800 underline underline-offset-2"
           >
             learning Japanese
-          </a>
-          {" "}and writing about the journey.
+          </a>{" "}
+          and writing about the journey.
         </p>
       </motion.main>
       <nav className="absolute w-full flex justify-between p-6">
@@ -276,15 +276,19 @@ const Home: NextPage = () => {
           variants={buttonVariants}
           custom={{ i: 0, direction: "top-left" }}
         >
-          <Button id="about-btn" href={menuItems.about.url}>{menuItems.about.label}</Button>
+          <Button id="about-btn" href={menuItems.about.url}>
+            {menuItems.about.label}
+          </Button>
         </motion.div>
         <motion.div
           initial="hidden"
           animate="visible"
           variants={buttonVariants}
-          custom={{ i: 1, direction: "top-right" }}
+          custom={{ i: 2, direction: "bottom-left" }}
         >
-          <Button id="blog-btn" href={menuItems.blog.url}>{menuItems.blog.label}</Button>
+          <Button id="projects-btn" href={menuItems.projects.url}>
+            {menuItems.projects.label}
+          </Button>
         </motion.div>
       </nav>
       <nav className="absolute w-full flex justify-between p-6 bottom-0">
@@ -292,9 +296,11 @@ const Home: NextPage = () => {
           initial="hidden"
           animate="visible"
           variants={buttonVariants}
-          custom={{ i: 2, direction: "bottom-left" }}
+          custom={{ i: 1, direction: "top-right" }}
         >
-          <Button id="projects-btn" href={menuItems.projects.url}>{menuItems.projects.label}</Button>
+          <Button id="blog-btn" href={menuItems.blog.url}>
+            {menuItems.blog.label}
+          </Button>
         </motion.div>
         <motion.div
           initial="hidden"
@@ -302,7 +308,9 @@ const Home: NextPage = () => {
           variants={buttonVariants}
           custom={{ i: 3, direction: "bottom-right" }}
         >
-          <Button id="contact-btn" href={menuItems.contact.url}>{menuItems.contact.label}</Button>
+          <Button id="contact-btn" href={menuItems.contact.url}>
+            {menuItems.contact.label}
+          </Button>
         </motion.div>
       </nav>
     </div>

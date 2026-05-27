@@ -32,7 +32,7 @@ const WordOfTheDay = ({ word }: Props) => {
           <p className="text-gray-500">{word.meanings.join(", ")}</p>
           <p className="text-xs text-gray-400 mt-2">
             Level {word.level} &middot;{" "}
-            {word.type === "kanji" ? "Kanji" : "Vocabulary"}
+            {/* {word.type === "kanji" ? "Kanji" : "Vocabulary"} */}
           </p>
         </div>
       </motion.div>
